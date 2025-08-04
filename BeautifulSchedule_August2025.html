@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🌸 ตารางกะการทำงาน สิงหาคม 2025 | BD Production</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+        
+        .container {
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+            overflow: hidden;
+            margin: 0 auto;
+            max-width: 100%;
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #ff6b6b, #ee5a24);
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        
+        .header h1 {
+            margin: 0;
+            font-size: 24px;
+            font-weight: bold;
+        }
+        
+        .header p {
+            margin: 10px 0 0 0;
+            opacity: 0.9;
+        }
+        
+        .table-container {
+            overflow-x: auto;
+            padding: 20px;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 12px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        
+        th {
+            background: linear-gradient(135deg, #4facfe, #00f2fe);
+            color: white;
+            padding: 12px 8px;
+            text-align: center;
+            font-weight: bold;
+            border: 1px solid #ddd;
+        }
+        
+        td {
+            padding: 10px 8px;
+            text-align: center;
+            border: 1px solid #ddd;
+            position: relative;
+        }
+        
+        /* สีพื้นหลังสำหรับแต่ละทีม */
+        .team-dc-art { background-color: #fff3e0; }
+        .team-north-art { background-color: #e8f5e8; }
+        .team-nara { background-color: #fce4ec; }
+        .team-dc-fresh { background-color: #e3f2fd; }
+        .team-admin-dc { background-color: #f3e5f5; }
+        .team-north-fresh { background-color: #e0f2f1; }
+        .team-admin-north { background-color: #fff8e1; }
+        .team-helper { background-color: #f1f8e9; }
+        .team-intern { background-color: #fafafa; }
+        
+        /* สีสำหรับเวลาทำงาน */
+        .time-700 { background-color: #ffcdd2; color: #c62828; font-weight: bold; }
+        .time-800 { background-color: #f8bbd9; color: #ad1457; font-weight: bold; }
+        .time-900 { background-color: #c8e6c9; color: #2e7d32; font-weight: bold; }
+        .time-1000 { background-color: #bbdefb; color: #1565c0; font-weight: bold; }
+        .time-1100 { background-color: #d1c4e9; color: #512da8; font-weight: bold; }
+        
+        /* สีสำหรับวันหยุด */
+        .holiday { background-color: #ffebee; color: #d32f2f; font-weight: bold; }
+        
+        /* สีสำหรับวันดอกไม้จีน */
+        .flower-day { 
+            background: linear-gradient(45deg, #ff9a9e, #fecfef);
+            color: #c2185b;
+            font-weight: bold;
+            border: 2px solid #e91e63;
+        }
+        
+        /* ไฮไลท์วันพิเศษ */
+        .special-day {
+            background: linear-gradient(45deg, #ffd54f, #ffb74d);
+            color: #e65100;
+            font-weight: bold;
+        }
+        
+        /* วันหยุดนักขัตฤกษ์ */
+        .public-holiday {
+            background: #ffcdd2;
+            color: #c62828;
+            font-weight: bold;
+        }
+        
+        /* ชื่อคน */
+        .name-cell {
+            font-weight: bold;
+            color: #333;
+        }
+        
+        /* ตำแหน่ง */
+        .position-cell {
+            font-style: italic;
+            color: #666;
+        }
+        
+        /* สถิติ */
+        .stats-cell {
+            background-color: #f5f5f5;
+            font-weight: bold;
+            color: #333;
+        }
+        
+        /* หมายเหตุ */
+        .note-cell {
+            background-color: #fff9c4;
+            font-size: 11px;
+            text-align: left;
+            color: #333;
+        }
+        
+        /* Header วัน */
+        .day-header {
+            writing-mode: vertical-rl;
+            text-orientation: mixed;
+            font-size: 10px;
+            min-width: 35px;
+        }
+        
+        .legend {
+            margin: 20px;
+            padding: 15px;
+            background: #f9f9f9;
+            border-radius: 10px;
+            border-left: 5px solid #4facfe;
+        }
+        
+        .legend h3 {
+            margin-top: 0;
+            color: #333;
+        }
+        
+        .legend-item {
+            display: inline-block;
+            margin: 5px 10px 5px 0;
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-size: 12px;
+        }
+        
+        @media (max-width: 768px) {
+            .table-container {
+                padding: 10px;
+            }
+            
+            table {
+                font-size: 10px;
+            }
+            
+            th, td {
+                padding: 6px 4px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🌸 ตารางกะการทำงาน BD Production</h1>
+            <p>📅 รอบวันที่ 26 สิงหาคม - 25 กันยายน 2025 | 🤖 สร้างโดย AI Scheduling System</p>
+        </div>
+        
+        <div class="legend">
+            <h3>🏷️ คำอธิบายสัญลักษณ์</h3>
+            <span class="legend-item time-700">7:00</span>
+            <span class="legend-item time-800">8:00</span>
+            <span class="legend-item time-900">9:00</span>
+            <span class="legend-item time-1000">10:00</span>
+            <span class="legend-item time-1100">11:00</span>
+            <span class="legend-item holiday">Q = วันหยุด</span>
+            <span class="legend-item flower-day">🌺 = วันดอกไม้จีน</span>
+            <span class="legend-item special-day">🎉 = วันพิเศษ</span>
+        </div>
+        
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th rowspan="3">🏢 สาขา/ทีม</th>
+                        <th rowspan="3">👤 ชื่อ-นามสกุล</th>
+                        <th rowspan="3">💼 ตำแหน่ง</th>
+                        <th colspan="31">📅 วันที่ในเดือน (สิงหาคม-กันยายน 2025)</th>
+                        <th rowspan="3">📊 วันทำงาน</th>
+                        <th rowspan="3">📊 วันหยุด</th>
+                        <th rowspan="3">📝 หมายเหตุ</th>
+                    </tr>
+                    <tr>
+                        <th class="day-header">26<br>ส.</th>
+                        <th class="day-header flower-day">27<br>อา.<br>🌺</th>
+                        <th class="day-header">28<br>จ.</th>
+                        <th class="day-header">29<br>อ.</th>
+                        <th class="day-header">30<br>พ.</th>
+                        <th class="day-header flower-day">31<br>พฤ.<br>🌺</th>
+                        <th class="day-header public-holiday">1<br>ศ.<br>❌</th>
+                        <th class="day-header">2<br>ส.</th>
+                        <th class="day-header flower-day">3<br>อา.<br>🌺</th>
+                        <th class="day-header">4<br>จ.</th>
+                        <th class="day-header">5<br>อ.</th>
+                        <th class="day-header">6<br>พ.</th>
+                        <th class="day-header flower-day">7<br>พฤ.<br>🌺</th>
+                        <th class="day-header public-holiday">8<br>ศ.<br>❌</th>
+                        <th class="day-header">9<br>ส.</th>
+                        <th class="day-header flower-day">10<br>อา.<br>🌺</th>
+                        <th class="day-header">11<br>จ.</th>
+                        <th class="day-header special-day">12<br>อ.<br>🎉</th>
+                        <th class="day-header">13<br>พ.</th>
+                        <th class="day-header flower-day">14<br>พฤ.<br>🌺</th>
+                        <th class="day-header public-holiday">15<br>ศ.<br>❌</th>
+                        <th class="day-header">16<br>ส.</th>
+                        <th class="day-header flower-day">17<br>อา.<br>🌺</th>
+                        <th class="day-header">18<br>จ.</th>
+                        <th class="day-header">19<br>อ.</th>
+                        <th class="day-header">20<br>พ.</th>
+                        <th class="day-header flower-day">21<br>พฤ.<br>🌺</th>
+                        <th class="day-header">22<br>ศ.</th>
+                        <th class="day-header">23<br>ส.</th>
+                        <th class="day-header flower-day">24<br>อา.<br>🌺</th>
+                        <th class="day-header">25<br>จ.</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- DC ประดิษฐ์ -->
+                    <tr class="team-dc-art">
+                        <td class="name-cell">🏭 DC ประดิษฐ์</td>
+                        <td class="name-cell">พี่ฝน (NAMFON)</td>
+                        <td class="position-cell">🔧 Keyman</td>
+                        <td class="time-1000">10:00</td>
+                        <td class="time-1000">10:00</td>
+                        <td class="holiday">Q</td>
+                        <td class="time-1000">10:00</td>
+                        <td>💤</td>
+                        <td class="time-1000">10:00</td>
+                        <td class="time-1000">10:00</td>
+                        <td class="holiday">Q</td>
+                        <td class="holiday">Q</td>
+                        <td class="time-1000">10:00</td>
+                        <td class="time-1000">10:00</td>
+                        <td class="time-1000">10:00</td>
+                        <td class="holiday">Q</td>
+                        <td class="holiday">Q</td>
+                        <td class="time-1000">10:00</td>
+                        <td class="time-1000">10:00</td>
+                        <td class="time-1000">10:00</td>
+                        <td class="time-1000">10:00</td>
+                        <td class="time-1000">10:00</td>
+                        <td class="holiday">Q</td>
+                        <td class="holiday">Q</td>
+                        <td class="time-1000">10:00</td>
+                        <td class="time-1000">10:00</td>
+                        <td class="holiday">Q</td>
+                        <td class="holiday">Q</td>
+                        <td class="holiday">Q</td>
+                        <td class="time-1000">10:00</td>
+                        <td class="time-1000">10:00</td>
+                        <td class="time-1000">10:00</td>
+                        <td class="time-1000">10:00</td>
+                        <td class="stats-cell">20</td>
+                        <td class="stats-cell">11</td>
+                        <td class="note-cell">🎯 Keyman | เน้นหยุดพุธ/พฤหัส</td>
+                    </tr>
+                    <tr class="team-dc-art">
+                        <td class="name-cell"></td>
+                        <td class="name-cell">แก้ม</td>
+                        <td class="position-cell">🔨 ประดิษฐ์</td>
+                        <td class="holiday">Q</td>
+                        <td class="holiday">Q</td>
+                        <td class="time-900">9:00</td>
+                        <td class="time-900">9:00</td>
+                        <td class="time-900">9:00</td>
+                        <td class="time-900">9:00</td>
+                        <td class="holiday">Q</td>
+                        <td class="time-900">9:00</td>
+                        <td class="time-900">9:00</td>
+                        <td class="holiday">Q</td>
+                        <td class="holiday">Q</td>
+                        <td class="time-900">9:00</td>
+                        <td class="time-900">9:00</td>
+                        <td class="time-900">9:00</td>
+                        <td class="holiday">Q</td>
+                        <td class="holiday">Q</td>
+                        <td class="time-900">9:00</td>
+                        <td class="time-900">9:00</td>
+                        <td class="time-900">9:00</td>
+                        <td class="time-900">9:00</td>
+                        <td class="time-900">9:00</td>
+                        <td class="holiday">Q</td>
+                        <td class="holiday">Q</td>
+                        <td class="time-900">9:00</td>
+                        <td class="time-900">9:00</td>
+                        <td class="time-900">9:00</td>
+                        <td class="time-900">9:00</td>
+                        <td class="time-900">9:00</td>
+                        <td class="holiday">Q</td>
+                        <td class="holiday">Q</td>
+                        <td class="time-900">9:00</td>
+                        <td class="stats-cell">20</td>
+                        <td class="stats-cell">11</td>
+                        <td class="note-cell">⚠️ ห้ามหยุดพร้อมกับพี่ฝน</td>
+                    </tr>
+                    
+                    <!-- เว้นบรรทัด -->
+                    <tr><td colspan="36" style="height: 10px; background: #f5f5f5;"></td></tr>
+                    
+                    <!-- กท.เหนือ ประดิษฐ์ -->
+                    <tr class="team-north-art">
+                        <td class="name-cell">🏢 กท.เหนือ ประดิษฐ์</td>
+                        <td class="name-cell">พี่นุ่น (NOON)</td>
+                        <td class="position-cell">🔧 Keyman</td>
+                        <td class="time-1000">10:00</td>
+                        <td class="holiday">Q</td>
+                        <td class="time-1000">10:00</td>
+                        <td class="time-1000">10:00</td>
+                        <td class="holiday">Q</td>
+                        <td class="holiday">Q</td>
+                        <td class="holiday">Q</td>
+                        <td class="time-1000">10:00</td>
+                        <td class="time-1000">10:00</td>
+                        <td class="time-1000">10:00</td>
+                        <td class="time-1000">10:00</td>
+                        <td class="time-1000">10:00</td>
+                        <td class="holiday">Q</td>
+                        <td class="time-1000">10:00</td>
+                        <td class="time-1000">10:00</td>
+                        <td class="holiday">Q</td>
+                        <td class="holiday">Q</td>
+                        <td class="time-1000">10:00</td>
+                        <td class="time-1000">10:00</td>
+                        <td class="time-1000">10:00</td>
+                        <td class="time-1000">10:00</td>
+                        <td class="holiday">Q</td>
+                        <td class="holiday">Q</td>
+                        <td class="time-1000">10:00</td>
+                        <td class="time-1000">10:00</td>
+                        <td class="time-1000">10:00</td>
+                        <td class="time-1000">10:00</td>
+                        <td class="time-1000">10:00</td>
+                        <td class="holiday">Q</td>
+                        <td class="time-1000">10:00</td>
+                        <td class="time-1000">10:00</td>
+                        <td class="stats-cell">21</td>
+                        <td class="stats-cell">10</td>
+                        <td class="note-cell">🎯 Keyman | เน้นหยุด 30-31-1</td>
+                    </tr>
+                    
+                    <!-- Admin DC -->
+                    <tr class="team-admin-dc">
+                        <td class="name-cell">👩‍💼 Admin DC</td>
+                        <td class="name-cell">แม็ก (Mac)</td>
+                        <td class="position-cell">🌺 ดอกไม้จีน</td>
+                        <td class="holiday">Q</td>
+                        <td class="flower-day">⭐ 9:00</td>
+                        <td class="holiday">Q</td>
+                        <td class="time-900">9:00</td>
+                        <td class="time-900">9:00</td>
+                        <td class="flower-day">⭐ 9:00</td>
+                        <td class="time-900">9:00</td>
+                        <td class="holiday">Q</td>
+                        <td class="flower-day">⭐ 9:00</td>
+                        <td class="time-900">9:00</td>
+                        <td class="time-900">9:00</td>
+                        <td class="time-900">9:00</td>
+                        <td class="flower-day">⭐ 9:00</td>
+                        <td class="time-900">9:00</td>
+                        <td class="holiday">Q</td>
+                        <td class="flower-day">⭐ 9:00</td>
+                        <td class="time-900">9:00</td>
+                        <td class="holiday">Q</td>
+                        <td class="time-900">9:00</td>
+                        <td class="flower-day">⭐ 9:00</td>
+                        <td class="time-900">9:00</td>
+                        <td class="holiday">Q</td>
+                        <td class="holiday">Q</td>
+                        <td class="flower-day">⭐ 9:00</td>
+                        <td class="holiday">Q</td>
+                        <td class="holiday">Q</td>
+                        <td class="flower-day">⭐ 9:00</td>
+                        <td class="time-900">9:00</td>
+                        <td class="time-900">9:00</td>
+                        <td class="time-900">9:00</td>
+                        <td class="holiday">Q</td>
+                        <td class="stats-cell">21</td>
+                        <td class="stats-cell">10</td>
+                        <td class="note-cell">🌺 วันดอกไม้จีน (⭐) อนุโลม 1-2 วัน/เดือน</td>
+                    </tr>
+                    
+                    <!-- ผู้ช่วยช่าง -->
+                    <tr class="team-helper">
+                        <td class="name-cell">🤝 ผู้ช่วยช่าง กท.เหนือ</td>
+                        <td class="name-cell">จิ้ต</td>
+                        <td class="position-cell">🌺 ดอกไม้จีน</td>
+                        <td class="time-800">8:00</td>
+                        <td class="flower-day">⭐ 8:00</td>
+                        <td class="time-800">8:00</td>
+                        <td class="time-800">8:00</td>
+                        <td class="holiday">Q</td>
+                        <td class="flower-day">⭐ 8:00</td>
+                        <td class="time-800">8:00</td>
+                        <td class="time-800">8:00</td>
+                        <td class="flower-day">⭐ 8:00</td>
+                        <td class="holiday">Q</td>
+                        <td class="time-800">8:00</td>
+                        <td class="time-800">8:00</td>
+                        <td class="flower-day">⭐ 8:00</td>
+                        <td class="holiday">Q</td>
+                        <td class="time-800">8:00</td>
+                        <td class="flower-day">⭐ 8:00</td>
+                        <td class="time-800">8:00</td>
+                        <td class="time-800">8:00</td>
+                        <td class="time-800">8:00</td>
+                        <td class="flower-day">⭐ 8:00</td>
+                        <td class="time-800">8:00</td>
+                        <td class="holiday">Q</td>
+                        <td class="flower-day">⭐ 8:00</td>
+                        <td class="time-800">8:00</td>
+                        <td class="time-800">8:00</td>
+                        <td class="time-800">8:00</td>
+                        <td class="holiday">Q</td>
+                        <td class="holiday">Q</td>
+                        <td class="time-800">8:00</td>
+                        <td class="time-800">8:00</td>
+                        <td class="holiday">Q</td>
+                        <td class="stats-cell">22</td>
+                        <td class="stats-cell">9</td>
+                        <td class="note-cell">🌺 วันดอกไม้จีน (⭐) อนุโลม 1 ครั้ง/เดือน</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        
+        <div class="legend">
+            <h3>📋 สรุปข้อมูลสำคัญ</h3>
+            <p><strong>🌺 วันดอกไม้จีน:</strong> ทุกวันอาทิตย์และพฤหัสบดี (แม็ก DC และจิ้ต สาขา 2 ต้องเข้าทำงาน)</p>
+            <p><strong>❌ วันหยุดนักขัตฤกษ์:</strong> 1, 8, 15 กันยายน | <strong>🎉 วันพิเศษ:</strong> 12 กันยายน (วันแม่)</p>
+            <p><strong>🎯 Keyman:</strong> พี่ฝน (DC), พี่นุ่น (กท.เหนือ) - ห้ามหยุดพร้อมกัน</p>
+            <p><strong>📊 สถิติ:</strong> วันทำงานเฉลี่ย 20-22 วัน | วันหยุดเฉลี่ย 9-12 วัน</p>
+        </div>
+    </div>
+</body>
+</html>
